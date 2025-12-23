@@ -154,9 +154,9 @@ const QuestionBlock = () => {
 
   return (
     // Основной контейнер компонента
-    <div className="w-full" ref={containerRef}>
+    <div ref={containerRef} className="w-full flex justify-center px-4">
       {/* Карточка с контентом */}
-      <div className="w-full rounded-3xl bg-white p-4 md:p-8 shadow-sm border border-blue-100">
+      <div className="w-full max-w-4xl rounded-3xl bg-white p-4 md:p-8 shadow-sm border border-blue-100">
         {/* Заголовок — зависит от выбранного экрана */}
         <h1 className="text-4xl md:text-6xl font-bold text-center mb-8">
           {screen === "cervical" && "Скрининг на рак шейки матки"}
