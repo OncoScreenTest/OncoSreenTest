@@ -1,25 +1,26 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "target": "ES2023",
-    "lib": ["ES2023"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    // настройки как компилировать TypeScript для конфигов
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo", // файл для ускорения сборки
+    "target": "ES2023", // компилируем в стандарт JavaScript ES2023
+    "lib": ["ES2023"], // подключаем типы для ES2023
+    "module": "ESNext", // используем современный формат модулей
+    "skipLibCheck": true, // пропускаем проверку типов в библиотеках
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
-    "noEmit": true,
+    /* Bundler mode */ // настройки для сборщика модулей
+    "moduleResolution": "bundler", // способ разрешения модулей
+    "allowImportingTsExtensions": true, // позволяет импортировать TypeScript файлы
+    "verbatimModuleSyntax": true, // сохраняет исходный синтаксис импортов
+    "moduleDetection": "force", // принудительно использует модули
+    "noEmit": true, // не создавать JavaScript файлы
 
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    /* Linting */ // настройки для проверки качества кода
+    "strict": true, // включаем строгую проверку типов
+    "noUnusedLocals": true, // предупреждает если переменная не используется
+    "noUnusedParameters": true, // предупреждает если параметр не используется
+    "erasableSyntaxOnly": true, // только типы которые можно удалить
+    "noFallthroughCasesInSwitch": true, // предупреждает если забыли break в switch
+    "noUncheckedSideEffectImports": true // предупреждает об импортах с побочными эффектами
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts"] // компилируем только конфиг Vite
 }

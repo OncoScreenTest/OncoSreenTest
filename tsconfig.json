@@ -1,7 +1,8 @@
 {
-  "files": [],
+  "files": [], // нет отдельных файлов, используются только ссылки ниже
   "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+    // ссылаемся на две отдельные конфигурации TypeScript
+    { "path": "./tsconfig.app.json" }, // конфигурация для приложения
+    { "path": "./tsconfig.node.json" } // конфигурация для конфига Vite
   ]
 }

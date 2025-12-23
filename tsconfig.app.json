@@ -1,27 +1,28 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "ES2022",
-    "useDefineForClassFields": true,
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    // настройки как компилировать TypeScript в JavaScript
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo", // файл для ускорения сборки
+    "target": "ES2022", // компилируем в стандарт JavaScript ES2022
+    "useDefineForClassFields": true, // правильная работа с полями в классах
+    "lib": ["ES2022", "DOM", "DOM.Iterable"], // подключаем типы для ES2022 и браузерного API
+    "module": "ESNext", // используем современный формат модулей
+    "skipLibCheck": true, // пропускаем проверку типов в библиотеках (ускорит сборку)
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
+    /* Bundler mode */ // настройки для сборщика модулей
+    "moduleResolution": "bundler", // способ разрешения модулей для сборщика
+    "allowImportingTsExtensions": true, // позволяет импортировать TypeScript файлы прямо
+    "verbatimModuleSyntax": true, // сохраняет исходный синтаксис импортов
+    "moduleDetection": "force", // принудительно использует модули
+    "noEmit": true, // не создавать JavaScript файлы (только проверка типов)
+    "jsx": "react-jsx", // используем новый способ работы с React
 
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    /* Linting */ // настройки для проверки качества кода
+    "strict": true, // включаем строгую проверку типов
+    "noUnusedLocals": true, // предупреждает если переменная не используется
+    "noUnusedParameters": true, // предупреждает если параметр функции не используется
+    "erasableSyntaxOnly": true, // только типы которые можно удалить
+    "noFallthroughCasesInSwitch": true, // предупреждает если забыли break в switch
+    "noUncheckedSideEffectImports": true // предупреждает об импортах с побочными эффектами
   },
-  "include": ["src"]
+  "include": ["src"] // компилируем только файлы из папки src
 }
